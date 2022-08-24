@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" [dir]="textDirection">
 
     <form class="login-form">
         <div class="login content">
@@ -9,21 +9,28 @@
             <div class="from-group">
                 <div class="form-controller">
                     <span><i class="fas fa-user"></i></span>
-                    <input type="text" placeholder="Username" autofocus>
+                    <input type="text" placeholder="{{'Login.UserName' |
+                        translate}}" autofocus>
                 </div>
                 <div class="form-controller">
                     <span><i class="fas fa-lock-alt"></i></span>
-                    <input type="text" placeholder="Password">
+                    <input type="text" placeholder="{{'Login.Password' |
+                        translate}}">
                 </div>
                 <div class="form-controller">
                     <span><i class="fas fa-globe-americas"></i></span>
-                    <select name="languages" id="languages">
-                      <option value="english" class="language">English</option>
-                      <option value="persian" class="language">Persian </option>
+                    <select name="languages" id="languages" #selectLanguage (change)="translateLanguageTo(selectLanguage.value)">
+                        <option *ngFor="let language of translate.getLangs()"
+                            [value]="language" class="language"
+                            [selected]="language == language">
+                            {{ language =='Persian' ? 'فارسی' : 'English' }}
+                        </option>
+                  
                     </select>
+
                 </div>
                 <div class="form-controller">
-                    <button type="button" disabled>Login</button>
+                    <button type="button" disabled>{{'Login.Login'| translate}}</button>
                 </div>
             </div>
 

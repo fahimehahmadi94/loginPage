@@ -1,0 +1,43 @@
+{
+    "name": "Login",
+    "short_name": "Login",
+    "description": "Login , page",
+    "dir": "ltr",
+
+    "icons": [{
+            "src": "./src/assets/img/favicon_io/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/assets/img/favicon_io/android-chrome-192x192.png",
+            "sizes": "196x196",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/assets/img/favicon_io/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "./src/assets/img/favicon_io/favicon--16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#3171e0",
+    "version": "1.0.0",
+    "manifest_version": "0.0",
+    "orientation": "portrait-primary",
+    "permissions": [
+        "notifications",
+        "webRequest",
+        "background",
+        "geolocation"
+    ],
+    "author": "Fahimeh AHmadi"
+
+}

@@ -1,0 +1,9 @@
+{
+    "Title": "Login page",
+    "Language": "English",
+    "Login": {
+        "UserName": "UserName",
+        "Password": "Password",
+        "Login": "Login"
+    }
+}
