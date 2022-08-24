@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,6 +11,12 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent implements OnInit {
 
   textDirection: string = '';
+
+  loginForm = new FormGroup({
+    userName: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
+
+  });
 
   constructor(public translate: TranslateService) {
     this.CheckDirection();
@@ -54,9 +62,14 @@ export class AppComponent implements OnInit {
   //Switch language
   translateLanguageTo(language: string) {
     localStorage.setItem('language', language);
-    language = language;
-
     this.translate.use(language);
+    this.CheckDirection();
   }
 
+   loginSubmit() {
+  // let loginForm = this.loginForm.value;
+  // console.log(loginForm);
+  // localStorage.setItem('userName', JSON.stringify([loginForm.userName]));
+
+  }
 }
