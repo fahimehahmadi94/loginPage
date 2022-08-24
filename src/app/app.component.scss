@@ -1,0 +1,123 @@
+@import "../styles.scss";
+section.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( 120deg, rgba(210, 141, 136, 1) 0%, rgba(168, 122, 143, 1) 20%, rgba(83, 100, 143, 1) 57%, rgba(83, 100, 143, 1) 59%, rgba(168, 122, 143, 1) 83%, rgba(210, 141, 136, 1) 100%);
+    .login-form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login {
+            width: 25%;
+            min-height: 350px;
+            max-height: 350px;
+            position: relative;
+            border-radius: 25px;
+            background-color: $gray;
+            .login-user {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: $drak-blue;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -60px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 4rem;
+                color: $white;
+            }
+            .from-group {
+                width: 80%;
+                height: auto;
+                margin: 80px 10%;
+                .form-controller {
+                    width: 100%;
+                    height: 50px;
+                    margin-bottom: 15px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    span {
+                        width: 50px;
+                        height: 100%;
+                        background-color: $drak-blue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $white;
+                        font-size: 1.4rem;
+                    }
+                    input[type="text"] {
+                        width: 100%;
+                        height: 100%;
+                        background-color: $light-blue;
+                        border: none;
+                        outline: none;
+                        color: $gray-color;
+                        padding-left: 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.1rem;
+                        &::placeholder {
+                            color: $gray-color;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                        }
+                        &::-ms-input-placeholder {
+                            color: $gray-color;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                        }
+                        &::-ms-input-placeholder {
+                            color: $gray-color;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                        }
+                    }
+                    #languages {
+                        width: 100%;
+                        height: 100%;
+                        background-color: $light-blue;
+                        border: none;
+                        outline: none;
+                        color: $gray-color;
+                        padding-left: 10px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 1.1rem;
+                    }
+                    button[type="button"] {
+                        width: 30%;
+                        height: 100%;
+                        padding: 20px;
+                        background-color: $drak-blue;
+                        border: none;
+                        outline: none;
+                        margin: 0 35%;
+                        color: $white;
+                        font-size: 1.3rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        transition: 0.5s;
+                        &:disabled {
+                            background-color: $light-blue;
+                            color: $gray-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
