@@ -12,11 +12,11 @@ export class AuthenticationService {
     public currentUser: Observable<User>;
 
     constructor(private http: HttpClient) {
-        // private userSubject$ = new BehaviorSubject<User | unknown>(null);
+        
         this.currentUserSubject =
             new BehaviorSubject<User>(
 
-                 //JSON.parse(localStorage.getItem('currentUser') )
+                
                  this.currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}')
             );
         this.currentUser = this.currentUserSubject.asObservable();

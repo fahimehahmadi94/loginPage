@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { observable, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,6 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
-
-
   constructor(
     private router: Router,
     public translate: TranslateService
@@ -27,6 +25,6 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
- 
+
   }
 }
