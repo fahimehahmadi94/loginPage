@@ -10,27 +10,28 @@
                 <div class="form-controller">
                     <span><i class="fas fa-user"></i></span>
                     <input type="text" placeholder="{{'Login.UserName' |
-                        translate}}" autofocus formControlName="userName">
+                        translate}}" autofocus formControlName="username">
                 </div>
                 <div class="form-controller">
                     <span><i class="fas fa-lock-alt"></i></span>
-                    <input type="text" placeholder="{{'Login.Password' |
+                    <input type="password" placeholder="{{'Login.Password' |
                         translate}}" formControlName="password" minlength="4" maxlength="8">
                 </div>
                 <div class="form-controller">
                     <span><i class="fas fa-globe-americas"></i></span>
+
                     <select name="languages" id="languages" #selectLanguage (change)="translateLanguageTo(selectLanguage.value)">
                         <option *ngFor="let language of translate.getLangs()"
-                            [value]="language" class="language"
-                            [selected]="language == language">
+                            class="language" [value]="language"
+                            [selected]="language ===
+                            translate.currentLang">
                             {{ language =='Persian' ? 'فارسی' : 'English' }}
                         </option>
                     </select>
-
                 </div>
                 <div class="form-controller">
                     <button type="submit" [disabled]="loginForm.valid ? false :
-                        true" [ngClass]="loginForm.valid ? 'enabled' : '' " [routerLink]="['/home']">
+                        true" [ngClass]="loginForm.valid ? 'enabled' : '' ">
                         {{'Login.Login'| translate}}
                     </button>
                 </div>

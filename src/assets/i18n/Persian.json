@@ -5,5 +5,10 @@
         "UserName": "نام کاربری",
         "Password": "رمز عبور",
         "Login": "ورود"
+    },
+    "Home": {
+        "HomePage": "خانه",
+        "Logout": "خروج"
     }
+
 }

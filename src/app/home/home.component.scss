@@ -1,0 +1,31 @@
+@import "../../styles.scss";
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 50px 0;
+    }
+    .logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 100px;
+            height: 100%;
+            padding: 20px;
+            border: none;
+            outline: none;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            cursor: pointer;
+            background-color: $drak-blue;
+            color: $white;
+        }
+    }
+}

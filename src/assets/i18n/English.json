@@ -5,5 +5,9 @@
         "UserName": "UserName",
         "Password": "Password",
         "Login": "Login"
+    },
+    "Home": {
+        "HomePage": "Home Page",
+        "Logout": "Logout"
     }
 }
