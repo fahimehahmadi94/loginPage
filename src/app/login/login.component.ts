@@ -46,10 +46,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-    // if (localStorage.getItem('language') == 'English') {
-    //   console.log("testtttttttttt");
-
-    // }
 
     if (localStorage.getItem('language') == null) {
       localStorage.setItem('language', 'English');
@@ -59,7 +55,7 @@ export class LoginComponent implements OnInit {
       this.translate.setDefaultLang(`${lang}`);
       this.translateLanguageTo(`${lang}`);
     }
-
+    
   }
 
   //Switch language
@@ -95,18 +91,5 @@ export class LoginComponent implements OnInit {
         });
 
   }
-  // loginSubmit() {
-  //   if (this.loginForm.invalid) {
-  //     return;
-  //   }
-  //   else {
-  //     let loginForm = this.loginForm.value;
-  //     this.router.navigate(['/home']);
-  //     localStorage.setItem('user', JSON.stringify(loginForm));
-  //   }
-
-  // }
-
-
 
 }

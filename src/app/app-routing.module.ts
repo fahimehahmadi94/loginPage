@@ -13,10 +13,11 @@ export const routes: Routes = [
     component: HomeComponent,
     canActivate: [AuthGuard]
   },
-  {
-    path: '**',
-    component: LoginComponent
-  }
+  // {
+  //   path: '**',
+  //   component: LoginComponent
+  // }
+
 ];
 
 @NgModule({
